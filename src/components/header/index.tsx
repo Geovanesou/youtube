@@ -8,7 +8,7 @@ import {
   SearchInput,
   SearchButton,
   HeaderButton
-} from "./style";
+} from "./styles";
 import HamburguerIcon from "../../assets/menu-hamburger.png";
 import Logo from "../../assets/YouTube-Logo.png";
 import SearchIcon from "../../assets/search.png";
