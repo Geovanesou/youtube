@@ -1,13 +1,16 @@
 import {
-  Container,
-  MenuItem,
+  Container,  MenuItem,
 } from "./styles";
 
-const items = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+const items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-function Menu() {
+interface IProps {
+  openMenu: boolean;
+}
+
+function Menu({ openMenu } : IProps ) {
   return (
-    <Container>
+    <Container openMenu={openMenu}>
       {items.map(() => (
         <MenuItem>
           Início

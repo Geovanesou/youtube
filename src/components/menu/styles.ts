@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  width: 250px;
+interface IProps {
+  openMenu: boolean;
+}
+
+export const Container = styled.div<IProps>`
+  width: ${({ openMenu }) => openMenu ? '250px' : '100px'};
   height: 100vh;
   box-sizing: border-box;
   padding: 65px 10px 10px 10px;
@@ -12,7 +16,7 @@ export const Container = styled.div`
 `;
 
 export const MenuItem = styled.div`
-  width: 100%;
+  width: 90%;
   min-height: 40px;
   border-radius: 10px;
   cursor: pointer;
