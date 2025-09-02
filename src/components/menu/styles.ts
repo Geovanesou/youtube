@@ -6,9 +6,9 @@ interface IProps {
 
 export const Container = styled.div<IProps>`
   width: ${({ openMenu }) => openMenu? '250px' : '100px'};
-  height: 100vh;
+  height: calc(100vh - 55px);
   box-sizing: border-box;
-  padding: 65px 10px 10px 0;
+  padding: 10px 10px 10px 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,11 +16,11 @@ export const Container = styled.div<IProps>`
 `;
 
 export const MenuItem = styled.div<IProps>`
-  width: ${({ openMenu }) => openMenu? '120px' : '10px'};
-  min-height: 40px;
+  width: 98%;
+  min-height: ${({ openMenu }) => openMenu? '45px' : '70px'};
   border-radius: 10px;
   cursor: pointer;
-  padding: 5px 5px;
+  padding: 2px 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: ${({ openMenu }) => openMenu? 'row' : 'column'};
@@ -40,16 +40,15 @@ export const MenuItem = styled.div<IProps>`
 `;
 
 export const SubItem = styled.div<IProps>`
-  width: 120px;
-  min-height: 40px;
+  width: 85%;
+  min-height: 30px;
   border-radius: 10px;
-  padding: 5px 5px;
+  padding: 5px 15px;
   box-sizing: border-box;
-  display: ${({ openMenu }) => openMenu? 'block' : 'none'}};
-  flex-direction: row;
+  display: ${({ openMenu }) => openMenu? 'flex' : 'none'}};
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 
     :hover {
       background-color: #f2f2f2;
