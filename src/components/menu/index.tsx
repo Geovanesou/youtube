@@ -18,7 +18,7 @@ const items = [
   { name: 'Início', link: '/', icon: HomeIcon },
   { name: 'Shorts', link: '/shorts', icon: ShortsIcon },
   { name: 'Inscrições', link: '/subscriptions', icon: SignIcon },
-  { name: 'Você', link: '/you', icon: YouIcon }
+  { name: 'Você', link: '', icon: YouIcon }
 ];
 
 const youitems = [
