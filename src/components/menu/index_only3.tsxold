@@ -1,0 +1,39 @@
+import {
+  ButtonIcon,
+  Container,
+  MenuItem,
+  Line,
+  SubItem
+} from "./styles";
+import HomeIcon from "../../assets/home_off.png";
+import ShortsIcon from "../../assets/bolt_off.png";
+import SignIcon from "../../assets/signed_off.png";
+import YouIcon from "../../assets/you_off.png";
+import HistoryIcon from "../../assets/clockfive_off.png";
+import PlIcon from "../../assets/history_off.png";
+import YvIcon from "../../assets/playcircle_off.png";
+
+const items = [
+  { name: 'Início', link: '/', icon: HomeIcon },
+  { name: 'Biblioteca', link: '/library', icon: YvIcon },
+  { name: 'Histórico', link: '/history', icon: HistoryIcon }
+];
+
+interface IProps {
+  openMenu: boolean;
+}
+
+function Menu({ openMenu } : IProps ) {
+  return (
+    <Container openMenu={openMenu}>
+      {items.map((item) => (
+        <MenuItem openMenu={openMenu}>
+          <ButtonIcon alt="" src={item.icon} />
+          <span>{item.name}</span>
+        </MenuItem>
+      ))}        
+    </Container>
+  );
+}
+
+export default Menu;
