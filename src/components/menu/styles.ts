@@ -13,6 +13,8 @@ export const Container = styled.div<IProps>`
   align-items: center;
   flex-direction: column;
   overflow-y: auto;
+  position: sticky;
+  top: 55px;
 `;
 
 export const MenuItem = styled.div<IProps>`
